@@ -2,7 +2,9 @@
   min-width: 10px;
   display: inline-block;
   opacity: 0;
-  animation: bounceIn 1s 1s;
+  animation: bounceIn;
+  animation-duration: 1s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
 }
 .text-animate-hover {
@@ -16,8 +18,8 @@
   }
 }
 
-@for $i from 1 through 35 {
-  .text-animate._#{$i} {
-    animation-delay: #{$i / 10}s;
+@for $index from 1 through 35 {
+  .text-animate._#{$index} {
+    animation-delay: #{$index / 10}s;
   }
 }
